@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+      <div v-if="page === 0">
+        Hello from page 0
+      </div>
+      <div v-if="page === 1">
+        Hello from page 1
+      </div>
+      <div v-if="page === 2">
+        Hello from page 2
+      </div>
+      <button @click="nextPage">Next Page</button>
+      <br />
+      <br />
+    {{ username }}
+    <br />
+    <input type="text" v-model="username" />
+    <button @click="submit">Submit</button>
+    <h1>{{ message }}</h1>
+    {{ value }}
+    <br />
+    <button @click="increment">Add</button>
+    <button @click="decrement">Subtract</button>
+  </div>
 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
