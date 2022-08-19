@@ -4,7 +4,8 @@ var app = new Vue({
     return {
       message: 'Vuepoints',
       value: 0,
-      username: ''
+      username: '',
+      page: 0
     }
 
   },
@@ -17,6 +18,13 @@ var app = new Vue({
     },
     submit() {
       console.log(this.username);
+    },
+    nextPage() {
+      this.page += 1;
+
+      if (this.page >= 3) {
+        this.page = 0;
+      }
     }
   }
 })
